@@ -7,8 +7,10 @@ var router = express.Router();
 // delete / resets the current board
 // post /next iterate n steps
 // get /delta get changes from last /next call
+var a = 0
 router.get('/', function(req, res, next) {
-  res.send('get /');
+  a = a +1 ;
+  res.send(String(a));
 });
 
 router.put('/', function(req, res, next) {
